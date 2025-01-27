@@ -35,13 +35,13 @@ class OtpInputField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(
-              color: ColorsManager.gry,
+              color: ColorsManager.green,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(
-              color: ColorsManager.kPrimaryColor,
+              color: ColorsManager.green,
             ),
           ),
           errorBorder: OutlineInputBorder(

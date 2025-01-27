@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../theming/colors.dart';
 import '../theming/styles.dart';
 
@@ -56,7 +57,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.kPrimaryColor,
+                color: ColorsManager.green,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
@@ -64,7 +65,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
+                color: ColorsManager.green,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
@@ -83,15 +84,15 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
         ),
-        hintStyle: hintStyle ?? TextStyles.font24BlackBold,
+        hintStyle: hintStyle ?? TextStyles.font12grey7DRegualar,
         hintText: hintText,
         suffixIcon: suffixIcon,
         prefixIcon: prefexIcon,
-        fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+        fillColor: backgroundColor ?? ColorsManager.green,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font24BlackBold,
+      style: TextStyles.font20blackMedium,
       validator: validator ??
           (value) {
             if (value == null || value.isEmpty) {
