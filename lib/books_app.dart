@@ -14,18 +14,23 @@ class BooksApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: MaterialApp(
-        theme: ThemeData(
-          scaffoldBackgroundColor: ColorsManager.white,
-          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-            backgroundColor: ColorsManager.white,
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: MaterialApp(
+          theme: ThemeData(
+            scaffoldBackgroundColor: ColorsManager.white,
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+              backgroundColor: ColorsManager.white,
+            ),
+            tabBarTheme: TabBarTheme(
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: MaterialStateProperty.all(Colors.transparent)),
+            textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
           ),
-          textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
+          debugShowCheckedModeBanner: false,
+          onGenerateRoute: appRouter.generateRoute,
+          initialRoute: Routes.mainScreen,
         ),
-
-        debugShowCheckedModeBanner: false,
-        onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.mainScreen,
       ),
     );
   }
