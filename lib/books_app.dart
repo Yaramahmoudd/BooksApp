@@ -20,9 +20,11 @@ class BooksApp extends StatelessWidget {
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             backgroundColor: ColorsManager.white,
           ),
+          tabBarTheme: TabBarTheme(
+              splashFactory: NoSplash.splashFactory,
+              overlayColor: MaterialStateProperty.all(Colors.transparent)),
           textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
         ),
-
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.mainScreen,
