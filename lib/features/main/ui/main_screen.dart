@@ -1,7 +1,7 @@
 import 'package:books_app/core/helpers/strings/app_icons.dart';
 import 'package:books_app/core/theming/colors.dart';
 import 'package:books_app/features/chats/ui/chats_screen.dart';
-import 'package:books_app/features/home/ui/home_screen.dart';
+import 'package:books_app/features/home/ui/screens/home_screen.dart';
 import 'package:books_app/features/library/ui/library_screen.dart';
 import 'package:books_app/features/main/ui/widgets/nav_bar_item.dart';
 import 'package:books_app/features/profile/ui/profile_screen.dart';

@@ -4,4 +4,5 @@ abstract class AppImages {
   static const String emptyNotifications =
       'assets/images/empty_notifications.png';
   static const String emptySearch = 'assets/images/empty_search.png';
+  static const String bookImage = 'assets/images/book_image.png';
 }
