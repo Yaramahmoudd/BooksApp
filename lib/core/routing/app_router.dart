@@ -1,3 +1,4 @@
+import 'package:books_app/features/sign_in/UI/Screen/signin.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
 
@@ -9,7 +10,18 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const Placeholder(),
         );
+
+      case Routes.signin:
+        return MaterialPageRoute(
+            builder:(_)=>Signin()
+        );
+
+      default:
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(child: Text('No route defined for ${settings.name}')),
+          ),
+        );
     }
-    return null;
   }
 }

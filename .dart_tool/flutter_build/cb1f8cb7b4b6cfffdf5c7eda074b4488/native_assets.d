@@ -1,0 +1,1 @@
+ C:\\Users\\Administrator\\StudioProjects\\BooksApp\\.dart_tool\\flutter_build\\cb1f8cb7b4b6cfffdf5c7eda074b4488\\native_assets.yaml: 

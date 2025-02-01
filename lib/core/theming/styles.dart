@@ -67,7 +67,7 @@ class TextStyles {
     color: ColorsManager.grey7D,
   );
   static TextStyle font12grey7DRegualar = TextStyle(
-    fontSize: 12.sp,
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorsManager.grey7D,
   );

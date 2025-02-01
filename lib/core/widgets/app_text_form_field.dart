@@ -57,7 +57,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.green,
+                color: ColorsManager.white,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
@@ -65,7 +65,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.green,
+                color: ColorsManager.primaryColor,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
@@ -96,7 +96,7 @@ class AppTextFormField extends StatelessWidget {
       validator: validator ??
           (value) {
             if (value == null || value.isEmpty) {
-              return "Must not be empty";
+              return "عفوا هذا البيان مطلوب";
             }
             return null;
           },

@@ -40,6 +40,7 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   flutter_svg: ^2.0.10+1
   flutter_bloc: ^8.1.6
+  easy_localization: ^3.0.7+1
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/fonts/
+    - assets/translations/
 
 
   fonts:
@@ -79,3 +81,4 @@ flutter:
           weight: 400
         - asset: assets/fonts/Tajawal-Light.ttf
           weight: 300
+
