@@ -29,8 +29,8 @@ class PreofileHeaderBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ProfileHeaderActionBotton(onTap: () {}, text: 'مشاركة الحساب'),
               ProfileHeaderActionBotton(onTap: () {}, text: 'تعديل بياناتك'),
+              ProfileHeaderActionBotton(onTap: () {}, text: 'مشاركة الحساب'),
             ],
           ),
         ),

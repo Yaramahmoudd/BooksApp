@@ -2,6 +2,7 @@ import 'package:books_app/core/helpers/strings/app_icons.dart';
 import 'package:books_app/core/helpers/strings/app_images.dart';
 import 'package:books_app/core/theming/colors.dart';
 import 'package:books_app/core/theming/styles.dart';
+import 'package:books_app/features/profile/ui/components/edit_book_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,14 +27,17 @@ class BooksTabView extends StatelessWidget {
                   childAspectRatio: 0.85,
                 ),
                 itemBuilder: (context, index) {
-                  return Container(
-                    width: 165.w,
-                    height: 195.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.r),
-                        image: const DecorationImage(
-                          image: AssetImage(AppImages.bookCover),
-                        )),
+                  return GestureDetector(
+                    child: Container(
+                      width: 165.w,
+                      height: 195.h,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.r),
+                          image: const DecorationImage(
+                            image: AssetImage(AppImages.bookCover),
+                          )),
+                    ),
+                    onTap: () => showEditBookMenu(context),
                   );
                 },
               ),
