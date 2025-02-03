@@ -27,7 +27,13 @@ class BooksApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.mainScreen,
+        initialRoute: Routes.signin,
+        builder: (context, child) {
+          return Directionality(
+            textDirection:TextDirection.rtl, // تحويل الاتجاه بناءً على اللغة
+            child: child!,
+          );
+        },
       ),
     );
   }
