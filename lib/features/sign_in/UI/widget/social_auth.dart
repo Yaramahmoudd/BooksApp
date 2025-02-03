@@ -1,4 +1,5 @@
 import 'package:books_app/books_app.dart';
+import 'package:books_app/core/helpers/strings/app_icons.dart';
 import 'package:books_app/core/theming/styles.dart';
 import 'package:books_app/core/widgets/custom_svg.dart';
 import 'package:flutter/material.dart';
@@ -22,15 +23,15 @@ class SocialAuth extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                child: CustomSvg(imgPath:"assets/icons/apple_ic.svg"),
+                child: CustomSvg(imgPath:AppIcons.apple),
                 height: 54.h,
               ),
               Container(
-                child: CustomSvg(imgPath:"assets/icons/google_ic.svg"),
+                child: CustomSvg(imgPath:AppIcons.google),
                 height: 54.h,
               ),
               Container(
-                child: CustomSvg(imgPath:"assets/icons/facebook_ic.svg"),
+                child: CustomSvg(imgPath:AppIcons.facebook),
                 height: 54.h,
               ),
             ],

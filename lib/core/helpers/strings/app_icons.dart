@@ -17,4 +17,8 @@ abstract class AppIcons {
   static const String send = '$path/send.svg';
   static const String correctCircle = '$path/correct_circle.svg';
   static const String trash = '$path/trash.svg';
+  static const String beiges="$path/beiges.svg";
+  static const String google="$path/google_ic.svg";
+  static const String facebook="$path/facebook_ic.svg";
+  static const apple="$path/apple_ic.svg";
 }

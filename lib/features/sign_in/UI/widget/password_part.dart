@@ -1,6 +1,9 @@
 import 'package:books_app/books_app.dart';
+import 'package:books_app/core/helpers/extensions.dart';
+import 'package:books_app/core/routing/routes.dart';
 import 'package:books_app/core/theming/colors.dart';
 import 'package:books_app/core/widgets/app_text_form_field.dart';
+import 'package:books_app/features/sign_in/UI/screen/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -82,9 +85,14 @@ class _PasswordPartState extends State<PasswordPart> {
                 )
               ],
             ),
-            Text(
-              "هل نسيت كلمة المرور؟",
-              style: TextStyles.font12grey7DRegualar,
+            GestureDetector(
+              onTap: (){
+                context.pushNamed(Routes.forgetpasswordScreen);
+              },
+              child: Text(
+                "هل نسيت كلمة المرور؟",
+                style: TextStyles.font12grey7DRegualar,
+              ),
             )
           ],
         )
