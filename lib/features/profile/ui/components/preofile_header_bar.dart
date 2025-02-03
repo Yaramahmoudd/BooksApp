@@ -1,5 +1,7 @@
+import 'package:books_app/core/helpers/extensions.dart';
 import 'package:books_app/core/helpers/spacing.dart';
 import 'package:books_app/core/helpers/strings/app_images.dart';
+import 'package:books_app/core/routing/routes.dart';
 import 'package:books_app/core/theming/styles.dart';
 import 'package:books_app/features/profile/ui/widgets/profile_header_action_botton.dart';
 import 'package:flutter/material.dart';
@@ -29,8 +31,10 @@ class PreofileHeaderBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ProfileHeaderActionBotton(onTap: () {}, text: 'تعديل بياناتك'),
-              ProfileHeaderActionBotton(onTap: () {}, text: 'مشاركة الحساب'),
+              ProfileHeaderActionBotton(
+                  text: 'تعديل بياناتك',
+                  onTap: () => context.pushNamed(Routes.editMyDataScreen)),
+              ProfileHeaderActionBotton(text: 'مشاركة الحساب', onTap: () {}),
             ],
           ),
         ),

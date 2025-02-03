@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,7 +11,7 @@ class AppTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
-  final String hintText;
+  final String? hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
@@ -22,6 +23,10 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final FocusNode? focusNode;
+  final String? initialVal;
+  final int? maxLines;
+  final Widget? label;
+  final Color? borderColor;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -29,43 +34,55 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.inputTextStyle,
     this.hintStyle,
-    required this.hintText,
+    this.hintText,
     this.isObscureText,
     this.suffixIcon,
     this.backgroundColor,
-    this.controller,
-    this.validator,
+    this.borderRadius,
+    this.prefexIcon,
+    this.readOnly,
     this.onTap,
     this.onFieldSubmitted,
-    this.readOnly,
-    this.borderRadius,
-    this.prefexIcon, this.focusNode,
+    this.controller,
+    this.validator,
+    this.focusNode,
+    this.initialVal,
+    this.maxLines,
+    this.label,
+    this.borderColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialVal,
       onTap: onTap,
       readOnly: readOnly ?? false,
       onFieldSubmitted: onFieldSubmitted,
       controller: controller,
       focusNode: focusNode,
+      cursorColor: ColorsManager.primaryColor,
+      cursorHeight: 25.h,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
-            EdgeInsets.only(left: 10.w, right: 10.w, bottom: 25.h,),
+            EdgeInsets.only(
+              left: 10.w,
+              right: 10.w,
+              bottom: 25.h,
+            ),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorsManager.green,
+              borderSide: BorderSide(
+                color: borderColor ?? ColorsManager.primaryColor,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
             ),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorsManager.green,
+              borderSide: BorderSide(
+                color: borderColor ?? ColorsManager.primaryColor,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
@@ -84,15 +101,17 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.0.r),
         ),
-        hintStyle: hintStyle ?? TextStyles.font12grey7DRegualar,
+        hintStyle: hintStyle ?? TextStyles.font14blackRegualar,
         hintText: hintText,
         suffixIcon: suffixIcon,
+        label: label,
         prefixIcon: prefexIcon,
-        fillColor: backgroundColor ?? ColorsManager.green,
+        fillColor: backgroundColor ?? ColorsManager.white,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font20blackMedium,
+      style: TextStyles.font14blackRegualar,
+      maxLines: maxLines,
       validator: validator ??
           (value) {
             if (value == null || value.isEmpty) {

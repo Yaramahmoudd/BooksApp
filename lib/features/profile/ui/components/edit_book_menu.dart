@@ -2,6 +2,7 @@ import 'package:books_app/core/helpers/extensions.dart';
 import 'package:books_app/core/helpers/spacing.dart';
 import 'package:books_app/core/helpers/strings/app_icons.dart';
 import 'package:books_app/core/helpers/strings/app_images.dart';
+import 'package:books_app/core/routing/routes.dart';
 import 'package:books_app/core/theming/colors.dart';
 import 'package:books_app/core/theming/styles.dart';
 import 'package:books_app/features/profile/ui/widgets/confirm_delete_dialog.dart';
@@ -40,14 +41,16 @@ void showEditBookMenu(BuildContext context) {
                     ),
                     ListTile(
                       title: Row(children: [
-                        SvgPicture.asset(AppIcons.edit),
+                        SvgPicture.asset(AppIcons.editInbox),
                         horizontalSpace(8),
                         Text(
                           'تعديل',
                           style: TextStyles.font16blackMedium,
                         ),
                       ]),
-                      onTap: () {},
+                      onTap: () {
+                        context.pushReplacementNamed(Routes.editBookScreen);
+                      },
                     ),
                     ListTile(
                       title: Row(children: [
@@ -85,7 +88,4 @@ void showEditBookMenu(BuildContext context) {
       );
     },
   );
-  // void editBookDialod(context) {
-
-  // }
 }

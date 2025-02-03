@@ -6,11 +6,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ProfileHeaderActionBotton extends StatelessWidget {
   const ProfileHeaderActionBotton({
     super.key,
-    required this.onTap,
     required this.text,
+    required this.onTap,
   });
-  final VoidCallback onTap;
   final String text;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {

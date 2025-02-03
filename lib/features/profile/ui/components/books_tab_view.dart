@@ -1,5 +1,7 @@
+import 'package:books_app/core/helpers/extensions.dart';
 import 'package:books_app/core/helpers/strings/app_icons.dart';
 import 'package:books_app/core/helpers/strings/app_images.dart';
+import 'package:books_app/core/routing/routes.dart';
 import 'package:books_app/core/theming/colors.dart';
 import 'package:books_app/core/theming/styles.dart';
 import 'package:books_app/features/profile/ui/components/edit_book_menu.dart';
@@ -43,25 +45,30 @@ class BooksTabView extends StatelessWidget {
               ),
             ),
             //todo : is adding book is fixed or appear after finish gridview ??
-            Container(
-              margin: EdgeInsets.only(bottom: 45.h, top: 12.h),
-              padding: EdgeInsets.symmetric(vertical: 18.h),
-              width: double.infinity,
-              height: 95.h,
-              decoration: BoxDecoration(
-                color: ColorsManager.beigeF2,
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-              child: Column(
-                children: [
-                  Text('إضافة كتاب',
-                      style: TextStyles.font18primaryColorMedium),
-                  SvgPicture.asset(
-                    AppIcons.addCircle,
-                    height: 24.h,
-                    width: 24.w,
-                  ),
-                ],
+            InkWell(
+              onTap: (){
+                context.pushNamed(Routes.addBookScreen);
+              },
+              child: Container(
+                margin: EdgeInsets.only(bottom: 45.h, top: 12.h),
+                padding: EdgeInsets.symmetric(vertical: 18.h),
+                width: double.infinity,
+                height: 95.h,
+                decoration: BoxDecoration(
+                  color: ColorsManager.beigeF2,
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                child: Column(
+                  children: [
+                    Text('إضافة كتاب',
+                        style: TextStyles.font18primaryColorMedium),
+                    SvgPicture.asset(
+                      AppIcons.addCircle,
+                      height: 24.h,
+                      width: 24.w,
+                    ),
+                  ],
+                ),
               ),
             )
           ],

@@ -22,6 +22,10 @@ class BooksApp extends StatelessWidget {
           );
         },
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            primary: ColorsManager.white,
+          ),
+          appBarTheme: const AppBarTheme(backgroundColor: ColorsManager.white),
           scaffoldBackgroundColor: ColorsManager.white,
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             backgroundColor: ColorsManager.white,

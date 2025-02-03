@@ -7,6 +7,7 @@ abstract class ColorsManager {
   static const Color beigeF4 = Color(0xFFF4F0E8);
   static const Color beigeF9 = Color(0xFFF9F8F7);
   static const Color beigeD6 = Color(0xFFD6CFC9);
+  static const Color beigeED = Color(0xFFEDEDED);
 
   static const Color grey7D = Color(0xFF7D7D7D);
   static const Color greyA9 = Color(0xFFA9A9A9);
