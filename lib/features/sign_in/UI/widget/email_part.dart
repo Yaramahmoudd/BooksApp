@@ -31,7 +31,7 @@ class _EmailPartState extends State<EmailPart> {
           ,isObscureText: false,
           controller: widget.Email,
           onTap: (){},
-          inputTextStyle:TextStyles.font14blackRegualar,
+          //inputTextStyle:TextStyles.font14blackMedium,
           validator: (value) {
             bool Email = RegExp(
                 r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")

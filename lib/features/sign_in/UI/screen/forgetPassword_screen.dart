@@ -49,12 +49,14 @@ class _ForgetpasswordScreenState extends State<ForgetpasswordScreen> {
                 },
                 backgroundColor: ColorsManager.primaryColor,
               ),
+              verticalSpace(30),
               RememberPasswordAndSignin()
             ]
             ),
           ),
         ),
-      )),
+      )
+      ),
     );
   }
 }
