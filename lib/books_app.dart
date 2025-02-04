@@ -15,7 +15,17 @@ class BooksApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
+        builder: (context, child) {
+          return Directionality(
+            textDirection: TextDirection.rtl,
+            child: child ?? const SizedBox(),
+          );
+        },
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            primary: ColorsManager.white,
+          ),
+          appBarTheme: const AppBarTheme(backgroundColor: ColorsManager.white),
           scaffoldBackgroundColor: ColorsManager.white,
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             backgroundColor: ColorsManager.white,
