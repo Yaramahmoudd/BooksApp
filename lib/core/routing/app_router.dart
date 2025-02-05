@@ -1,4 +1,7 @@
 import 'package:books_app/features/main/ui/main_screen.dart';
+import 'package:books_app/features/otp/UI/screens/confirm_password_screen.dart';
+import 'package:books_app/features/otp/UI/screens/new_password_screen.dart';
+import 'package:books_app/features/otp/UI/screens/otp_Screen.dart';
 import 'package:books_app/features/sign_in/UI/screen/forgetPassword_screen.dart';
 import 'package:books_app/features/sign_in/UI/screen/signin_screen.dart';
 import 'package:books_app/features/signup/Ui/screens/sign_up_screen.dart';
@@ -17,8 +20,10 @@ class AppRouter {
       case Routes.signin: return createRoute(Signin());
       case Routes.forgetpasswordScreen: return createRoute(ForgetpasswordScreen());
       case Routes.signupScreen: return createRoute(SignUpScreen());
-      case Routes.otpScreen: return MaterialPageRoute(builder: (_) => const Placeholder());
+      case Routes.otpScreen: return createRoute(OtpScreen());
       case Routes.confirmation: return createRoute(ConfirmationScreen());
+      case Routes.newpassword: return createRoute(NewPasswordScreen());
+      case Routes.confirempasseord: return createRoute(ConfirmPasswordScreen());
     }
     return null;
   }

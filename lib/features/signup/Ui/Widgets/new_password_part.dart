@@ -8,7 +8,8 @@ import '../../../../core/widgets/app_text_form_field.dart';
 
 class NewPasswordPart extends StatefulWidget {
   TextEditingController Password;
-  NewPasswordPart({super.key, required this.Password});
+  String text;
+  NewPasswordPart({super.key, required this.Password,required this.text});
 
   @override
   State<NewPasswordPart> createState() => _NewPasswordPartState();
@@ -22,7 +23,7 @@ class _NewPasswordPartState extends State<NewPasswordPart> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
       Text(
-        "كلمة المرور",
+      widget.text,
         style: TextStyles.font16blackMedium,
       ),
       verticalSpace(10),
@@ -51,7 +52,7 @@ class _NewPasswordPartState extends State<NewPasswordPart> {
                   )
                 : Icon(Icons.visibility_outlined,
                     size: 16, color: ColorsManager.grey7D)),
-        inputTextStyle: TextStyles.font14blackRegualar,
+        inputTextStyle: TextStyles.font22blackMedium,
         validator: (value) {
           if (value == null || value.isEmpty) {
             return "يرجى ادخال كلمة المرور";

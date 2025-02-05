@@ -36,11 +36,13 @@ class _EmailPartState extends State<EmailPart> {
             bool Email = RegExp(
                 r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                 .hasMatch(value!);
-            if (!Email) {
-              return "هذا الحساب غير صحيح";
-            }
-            else  if (value == null || value.isEmpty) {
+            if (value == null || value.isEmpty) {
               return "يرجى ادخال البريد الالكترونى";
+            }
+              else{
+              if (!Email) {
+                return "هذا الحساب غير صحيح";
+              }
             }
             return null;
           },

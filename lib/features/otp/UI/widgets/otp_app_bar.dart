@@ -1,13 +1,14 @@
 import 'package:books_app/core/helpers/extensions.dart';
+import 'package:books_app/core/helpers/spacing.dart';
+import 'package:books_app/core/theming/colors.dart';
+import 'package:books_app/features/sign_in/UI/screen/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
-class ForgetPasswordAppBar extends StatelessWidget {
-  const ForgetPasswordAppBar({super.key});
+class OtpAppBar extends StatelessWidget {
+  const OtpAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class ForgetPasswordAppBar extends StatelessWidget {
       backgroundColor: ColorsManager.white,
       elevation: 0,
       surfaceTintColor: Colors.transparent,
-      flexibleSpace:Row(
+      flexibleSpace: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
@@ -26,12 +27,12 @@ class ForgetPasswordAppBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "نسيت كلمة المرور",
+                  "أدخل الكود",
                   style: TextStyles.font22blackBold,
                 ),
                 verticalSpace(10),
                 Text(
-                  "أدخل بريدك الإلكتروني لإعادة تعيين\n        كلمة المرور الخاصة بك.",
+                  "أرسلنا لك الكود على البريد الالكتروني\n                   الخاص بك",
                   style: TextStyles.font16grey7DRegualar,
                 )
               ],
@@ -40,7 +41,7 @@ class ForgetPasswordAppBar extends StatelessWidget {
           horizontalSpace(30),
           Padding(
             padding:  EdgeInsets.only(
-                left: 10.h
+              left: 10.h
             ),
             child: Container(
               height: 40.h,
@@ -58,7 +59,7 @@ class ForgetPasswordAppBar extends StatelessWidget {
           ),
         ],
       ),
-      leading:SizedBox()
+      leading: SizedBox(),
     );
   }
 }

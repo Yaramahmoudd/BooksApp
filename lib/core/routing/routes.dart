@@ -6,4 +6,6 @@ class Routes {
   static const String signupScreen="/signup";
   static const String otpScreen="/otp";
   static const String confirmation="/confirmation";
+  static const String newpassword="/newpassword";
+  static const String confirempasseord="/confirempasseord";
 }
