@@ -4,7 +4,9 @@ abstract class AppIcons {
   static const String book = '$path/book.svg';
   static const String bookColored = '$path/book_colored.svg';
   static const String directInbox = '$path/direct_inbox.svg';
-  static const String edit = '$path/edit.svg';
+  static const String editInbox = '$path/edit_inbox.svg';
+  static const String editOutbox = '$path/edit_outbox.svg';
+  static const String editOutboxColored = '$path/edit_outbox_colored.svg';
   static const String export = '$path/export.svg';
   static const String frame = '$path/frame.svg';
   static const String heart = '$path/heart.svg';
