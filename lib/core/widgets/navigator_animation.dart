@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 Route createRoute(Widget screenName) {
   return PageRouteBuilder(
     transitionDuration: Duration(milliseconds: 500),
-    pageBuilder: (context, animation, secondaryAnimation) => screenName,
+    pageBuilder: (context, animation, secondaryAnimation)=>screenName,
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(1.0, 0.0); // يبدأ من خارج الشاشة على اليمين
       const end = Offset.zero; // ينتهي عند موقعه الطبيعي

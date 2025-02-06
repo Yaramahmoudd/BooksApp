@@ -23,4 +23,5 @@ abstract class AppIcons {
   static const String google="$path/google_ic.svg";
   static const String facebook="$path/facebook_ic.svg";
   static const apple="$path/apple_ic.svg";
+  static const confermation_beige="$path/confirmation_beige.svg";
 }

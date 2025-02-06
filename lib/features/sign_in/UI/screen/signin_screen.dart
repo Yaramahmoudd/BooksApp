@@ -63,14 +63,14 @@ class _SigninState extends State<Signin> {
                     textStyle: TextStyles.font16whiteBold,
                     onPressed:(){
                       if(formkey.currentState!.validate()) {
-                        context.pushNamed(Routes.splashScreen);
+                        context.pushReplacementNamed(Routes.mainScreen);
                       }
                     },
                     backgroundColor: ColorsManager.primaryColor,
                   ),
                   verticalSpace(30),
                   SocialAuth(),
-                  verticalSpace(70),
+                  verticalSpace(100),
                   CheakAccount()
                 ],
               ),
