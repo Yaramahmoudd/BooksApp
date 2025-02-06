@@ -1,6 +1,6 @@
 import 'package:books_app/core/routing/app_router.dart';
-import 'package:books_app/core/routing/routes.dart';
 import 'package:books_app/core/theming/colors.dart';
+import 'package:books_app/features/home/ui/empty_notification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,7 +15,17 @@ class BooksApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
+        builder: (context, child) {
+          return Directionality(
+            textDirection: TextDirection.rtl,
+            child: child ?? const SizedBox(),
+          );
+        },
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            primary: ColorsManager.white,
+          ),
+          appBarTheme: const AppBarTheme(backgroundColor: ColorsManager.white),
           scaffoldBackgroundColor: ColorsManager.white,
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             backgroundColor: ColorsManager.white,
@@ -26,14 +36,9 @@ class BooksApp extends StatelessWidget {
           textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
         ),
         debugShowCheckedModeBanner: false,
-        onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.signin,
-        builder: (context, child) {
-          return Directionality(
-            textDirection:TextDirection.rtl, // تحويل الاتجاه بناءً على اللغة
-            child: child!,
-          );
-        },
+        // onGenerateRoute: appRouter.generateRoute,
+        // initialRoute: Routes.mainScreen,
+       home: const EmptyNotificationScreen(),
       ),
     );
   }

@@ -14,8 +14,8 @@ class TabBarViewContent extends StatelessWidget {
         child: TabBarView(
       controller: controller,
       children: const [
-        QuotesTabView(),
         BooksTabView(),
+        QuotesTabView(),
       ],
     ));
   }

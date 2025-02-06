@@ -5,15 +5,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'font_weight.dart';
 
 class TextStyles {
+  static TextStyle font24primaryColorRegular = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.primaryColor,
+  );
   static TextStyle font22blackBold = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeightHelper.bold,
-    color: Colors.black,
+    color: ColorsManager.black,
   );
   static TextStyle font22blackMedium = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeightHelper.medium,
-    color: Colors.black,
+    color: ColorsManager.black,
   );
   static TextStyle font20blackMedium = TextStyle(
     fontSize: 20.sp,
