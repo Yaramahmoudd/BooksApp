@@ -26,9 +26,7 @@ class TabBarContent extends StatelessWidget {
           icon: SizedBox(
             width: 156.w,
             child: SvgPicture.asset(
-              controller.index == 0
-                  ? AppIcons.quoteDownColored
-                  : AppIcons.quoteDown,
+              controller.index == 0 ? AppIcons.bookColored : AppIcons.book,
               color: ColorsManager.primaryColor,
             ),
           ),
@@ -37,11 +35,13 @@ class TabBarContent extends StatelessWidget {
           icon: SizedBox(
             width: 156.w,
             child: SvgPicture.asset(
-              controller.index != 0 ? AppIcons.bookColored : AppIcons.book,
+              controller.index != 0
+                  ? AppIcons.quoteDownColored
+                  : AppIcons.quoteDown,
               color: ColorsManager.primaryColor,
             ),
           ),
-        )
+        ),
       ],
     );
   }
