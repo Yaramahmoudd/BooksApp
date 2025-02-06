@@ -1,6 +1,9 @@
 import 'package:books_app/features/home/ui/empty_notification_screen.dart';
 import 'package:books_app/features/home/ui/empty_search_screen.dart';
 import 'package:books_app/features/main/ui/main_screen.dart';
+import 'package:books_app/features/otp/UI/screens/confirm_password_screen.dart';
+import 'package:books_app/features/otp/UI/screens/new_password_screen.dart';
+import 'package:books_app/features/otp/UI/screens/otp_Screen.dart';
 import 'package:books_app/features/profile/ui/add_book_screen.dart';
 import 'package:books_app/features/profile/ui/edit_book_screen.dart';
 import 'package:books_app/features/profile/ui/edit_my_data_screen.dart';
@@ -17,6 +20,8 @@ class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
     switch (settings.name) {
+      case Routes.newpassword: return createRoute(NewPasswordScreen());
+      case Routes.confirempasseord: return createRoute(ConfirmPasswordScreen());
       case Routes.confirmation: return createRoute(ConfirmationScreen());
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const Placeholder());

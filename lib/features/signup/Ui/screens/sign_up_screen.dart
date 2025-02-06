@@ -28,6 +28,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   GlobalKey<FormState>FormKey=GlobalKey<FormState>();
   @override
+  void didpose(){
+    super.dispose();
+    Name.dispose();
+    Email.dispose();
+    Password.dispose();
+  }
   Widget build(BuildContext context) {
     debugPrint("Current TextDirection: ${Directionality.of(context)}");
     return Scaffold(
@@ -57,7 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     verticalSpace(30),
                     EmailPart(Email: Email),
                     verticalSpace(30),
-                    NewPasswordPart(Password: Password,),
+                    NewPasswordPart(Password: Password,text: "كلمة المرور",),
                     verticalSpace(20),
                     AppTextButton(
                         buttonText: "إنشاء حساب",

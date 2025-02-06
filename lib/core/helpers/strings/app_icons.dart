@@ -24,4 +24,7 @@ abstract class AppIcons {
   static const String facebook="$path/facebook_ic.svg";
   static const apple="$path/apple_ic.svg";
   static const confermation_beige="$path/confirmation_beige.svg";
+  static const otp_beige1="$path/otp_beige1.svg";
+  static const new_password_beige="$path/new_password_beige.svg";
+  static const confirm_password_beige="$path/confirme_password_beige.svg";
 }
