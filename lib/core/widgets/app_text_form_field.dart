@@ -111,7 +111,6 @@ class AppTextFormField extends StatelessWidget {
       ),
       obscureText: isObscureText ?? false,
       style: TextStyles.font14blackMedium,
-      style: TextStyles.font14blackRegualar,
       maxLines: maxLines,
       validator: validator ??
           (value) {
