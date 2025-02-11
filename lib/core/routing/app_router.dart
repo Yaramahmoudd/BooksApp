@@ -1,3 +1,4 @@
+import 'package:books_app/features/Splash/splash_screen.dart';
 import 'package:books_app/features/main/ui/main_screen.dart';
 import 'package:books_app/features/otp/UI/screens/confirm_password_screen.dart';
 import 'package:books_app/features/otp/UI/screens/new_password_screen.dart';
@@ -15,7 +16,7 @@ class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
     switch (settings.name) {
-      case Routes.splashScreen: return MaterialPageRoute(builder: (_) => const Placeholder());
+      case Routes.splashScreen: return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.mainScreen: return MaterialPageRoute(builder: (_) => const MainScreen());
       case Routes.signin: return createRoute(Signin());
       case Routes.forgetpasswordScreen: return createRoute(ForgetpasswordScreen());
