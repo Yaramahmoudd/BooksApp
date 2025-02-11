@@ -10,6 +10,7 @@ import 'package:books_app/features/profile/ui/edit_my_data_screen.dart';
 import 'package:books_app/features/sign_in/UI/screen/forgetPassword_screen.dart';
 import 'package:books_app/features/sign_in/UI/screen/signin_screen.dart';
 import 'package:books_app/features/signup/Ui/screens/sign_up_screen.dart';
+import 'package:books_app/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/signup/Ui/screens/confirmation_screen.dart';
@@ -24,16 +25,16 @@ class AppRouter {
       case Routes.confirempasseord: return createRoute(ConfirmPasswordScreen());
       case Routes.confirmation: return createRoute(ConfirmationScreen());
       case Routes.splashScreen:
-        return MaterialPageRoute(builder: (_) => const Placeholder());
+        return MaterialPageRoute(builder: (_) => SplashScreen());
       //registration
       case Routes.signin:
         return createRoute(const Signin());
       case Routes.forgetpasswordScreen:
         return createRoute(const ForgetpasswordScreen());
       case Routes.signupScreen:
-        return MaterialPageRoute(builder: (_) => const Placeholder());
+        return createRoute(const SignUpScreen());
       case Routes.otpScreen:
-        return MaterialPageRoute(builder: (_) => const Placeholder());
+        return createRoute(const OtpScreen());
 
       //home
       case Routes.mainScreen:

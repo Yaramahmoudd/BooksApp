@@ -33,6 +33,7 @@ class _PasswordPartState extends State<PasswordPart> {
         verticalSpace(10),
         AppTextFormField(
           hintText: "ادخل كلمه المرور",
+          hintStyle: TextStyles.font12grey7DRegualar,
           isObscureText: issecure,
           controller: widget.Password,
           enabledBorder: OutlineInputBorder(
@@ -43,6 +44,7 @@ class _PasswordPartState extends State<PasswordPart> {
               borderSide:
               BorderSide(color: ColorsManager.primaryColor, width: 1.w)),
           backgroundColor: ColorsManager.white,
+          maxLines: 1,
           suffixIcon: IconButton(
               onPressed: () {
                 issecure = !issecure;
@@ -56,7 +58,7 @@ class _PasswordPartState extends State<PasswordPart> {
               )
                   : Icon(Icons.visibility_outlined,
                   size: 16, color: ColorsManager.grey7D)),
-          inputTextStyle: TextStyles.font14blackRegualar,
+          inputTextStyle: TextStyles.font12grey7DRegualar,
           validator: (value) {
             if (value == null || value.isEmpty) {
               return "يرجى ادخال كلمة المرور";

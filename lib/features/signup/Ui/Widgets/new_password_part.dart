@@ -29,6 +29,8 @@ class _NewPasswordPartState extends State<NewPasswordPart> {
       verticalSpace(10),
       AppTextFormField(
         hintText: "ادخل كلمه المرور",
+        maxLines: 1,
+        hintStyle: TextStyles.font12grey7DRegualar,
         isObscureText: issecure,
         controller: widget.Password,
         enabledBorder: OutlineInputBorder(
