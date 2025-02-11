@@ -4,6 +4,8 @@ import 'package:books_app/features/home/ui/empty_notification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/routing/routes.dart';
+
 class BooksApp extends StatelessWidget {
   final AppRouter appRouter;
   const BooksApp({super.key, required this.appRouter});
@@ -36,9 +38,9 @@ class BooksApp extends StatelessWidget {
           textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
         ),
         debugShowCheckedModeBanner: false,
-        // onGenerateRoute: appRouter.generateRoute,
-        // initialRoute: Routes.mainScreen,
-       home: const EmptyNotificationScreen(),
+        onGenerateRoute: appRouter.generateRoute,
+        initialRoute: Routes.splashScreen,
+      // home: const EmptyNotificationScreen(),
       ),
     );
   }

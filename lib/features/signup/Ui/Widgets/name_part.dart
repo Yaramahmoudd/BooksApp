@@ -27,6 +27,7 @@ class _NamePartState extends State<NamePart> {
         verticalSpace(10),
         AppTextFormField(hintText: "ادخل اسمك",
         hintStyle: TextStyles.font14greyA9Regualar,
+        maxLines: 1,
         isObscureText: false,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),

@@ -27,8 +27,10 @@ class _EmailPartState extends State<EmailPart> {
           style: TextStyles.font14blackMedium,
         ),
         verticalSpace(10),
-        AppTextFormField(hintText: "ادخل البريد الالكترونى"
-          ,isObscureText: false,
+        AppTextFormField(hintText: "ادخل البريد الالكترونى",
+           hintStyle: TextStyles.font12grey7DRegualar,
+          isObscureText: false,
+          maxLines: 1,
           controller: widget.Email,
           onTap: (){},
           //inputTextStyle:TextStyles.font14blackMedium,
